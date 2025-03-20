@@ -1,0 +1,25 @@
+.body {
+    background: #f8f5f4;
+}
+
+.header {
+    background: #f8f5f4;
+}
+
+.header__inner {
+    margin: 0 auto;
+    padding: 15px 15px;
+    max-width: 100%;
+    border: solid;
+    border-color: #e8e4e1;
+    height: 50px;
+}
+
+.header__logo {
+    color: #958779;
+    display: inline;
+    text-decoration: none;
+    font-weight: lighter;
+    font-size: 24px;
+    text-align: center
+}
