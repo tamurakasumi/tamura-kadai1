@@ -14,9 +14,9 @@
 <body>
   <header class="header">
     <div class="header__inner">
-      <h1 class="header__logo" href="/">
+      <h2 class="header__logo">
         FashionablyLate
-      </h1>
+      </h2>
     </div>
   </header>
 

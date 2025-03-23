@@ -24,22 +24,22 @@ class ContactRequest extends FormRequest
     public function rules()
     {
         return [
-            'lase_name' => ['required', 'string', 'max255'],
-            'first_name' => ['required', 'string', 'max255'],
+            'last_name' => ['required', 'string', 'max:255'],
+            'first_name' => ['required', 'string', 'max:255'],
             'gender' => ['required', 'boolean'],
-            'email' => ['required', 'string', 'email', 'max255'],
+            'email' => ['required', 'string', 'email', 'max:255'],
             'tel' => ['required', 'numeric', 'digits_between:2,5'],
-            'address' => ['required', 'string', 'max255'],
-            'category_id' => ['required', 'string', 'max255'],
-            'building' => ['nullable', 'string', 'max255'],
-            'detail' => ['required', 'string', 'max120']
+            'address' => ['required', 'string', 'max:255'],
+            'category_id' => ['required', 'string', 'unique:categories'],
+            'building' => ['nullable', 'string', 'max:255'],
+            'detail' => ['required', 'string', 'max:120']
         ];
     }
 
     public function messages()
     {
         return [
-            'lase_name.required' => '姓を入力してください',
+            'last_name.required' => '姓を入力してください',
             'first_name.required' => '名を入力してください',
             'gender.required' => '性別を選択してください',
             'email.required' => 'メールアドレスを入力してください',

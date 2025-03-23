@@ -121,9 +121,10 @@
             <span class="form__label--required">※</span>
           </div>
           <select class="create-form__item-select" name="category_id">
-            <!-- フォーイーチディレクティブ（＄カテゴリ複数　as　＄カテゴリ）入る -->
-            <option type="text" value="">カテゴリ</option>
-            <!-- フォーイーチディレクティブ閉じが入る -->
+          <option value="">選択して下さい</option>
+            @foreach ($categories as $category)
+              <option value="{{ $category['id'] }}" >{{ $category['content'] }}</option>
+            @endforeach
           </select>
           <div class="form__error">
             @error('category_id')
