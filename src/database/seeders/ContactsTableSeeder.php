@@ -15,6 +15,9 @@ class ContactsTableSeeder extends Seeder
      */
     public function run()
     {
+        \App\Models\Contact::factory(34)->create();
+        $this->call(ContactsTableSeeder::class);
+
         $param = [
         'last_name' => '山田',
         'first_name' => '太郎',
@@ -23,9 +26,9 @@ class ContactsTableSeeder extends Seeder
         'tel' => '08012345678',
         'address' => '東京都渋谷区千駄ヶ谷千駄ヶ谷1-2-3',
         'building' => '千駄ヶ谷マンション101',
-        'category_id' =>'商品の交換について',
+        'category_id' => 1,
         'detail' => '届いた商品が注文とは別のものが来た。商品を交換して欲しい。'
     ];
-    DB::table('contact')->insert($param);
+    DB::table('contacts')->insert($param);
     }
 }

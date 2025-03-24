@@ -17,7 +17,7 @@ class CreateContactsTable extends Migration
             $table->id();
             $table->string('last_name', 255);
             $table->string('first_name', 255);
-            $table->boolean('gender')->comment('性別:1=男性､2=女性､3=その他');
+            $table->enum('gender', ['1', '2', '3'])->comment('性別:1=男性､2=女性､3=その他');
             $table->string('email', 255);
             $table->string('tel', 255);
             $table->string('address', 255);
