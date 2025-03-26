@@ -15,8 +15,8 @@ class ContactsTableSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Contact::factory(34)->create();
-        $this->call(ContactsTableSeeder::class);
+        // \App\Models\Contact::factory(34)->create();
+        // $this->call(ContactsTableSeeder::class);
 
         $param = [
         'last_name' => '山田',

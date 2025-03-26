@@ -12,10 +12,9 @@ class ContactController extends Controller
 {
     public function index()
     {
-        $contacts = Contact::with('category')->get();
         $categories = Category::all();
 
-        return view ('index', compact('contacts', 'categories'));
+        return view ('index', compact('categories'));
     }
     
     public function confirm(ContactRequest $request)

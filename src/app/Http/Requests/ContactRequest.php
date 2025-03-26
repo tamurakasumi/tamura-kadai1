@@ -30,7 +30,7 @@ class ContactRequest extends FormRequest
             'email' => ['required', 'string', 'email', 'max:255'],
             'tel' => ['required', 'numeric', 'digits_between:2,5'],
             'address' => ['required', 'string', 'max:255'],
-            'category_id' => ['required', 'string', 'unique:categories'],
+            'category_id' => ['required', 'string'],
             'building' => ['nullable', 'string', 'max:255'],
             'detail' => ['required', 'string', 'max:120']
         ];
